@@ -1,0 +1,262 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import heroImage from '~/assets/images/img-02.jpeg';
+import img03 from '~/assets/images/img-03.jpeg';
+import img04 from '~/assets/images/img-04.jpeg';
+
+const metadata = {
+  title: 'Servicios de Seguridad',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Servicios"
+    title="Soluciones Integrales de Seguridad Privada"
+    subtitle="Protección 24/7 para todos los sectores. Con más de 15 años de experiencia en Cancún y la Península de Yucatán, ofrecemos servicios personalizados para tu tranquilidad operativa."
+    actions={[{ variant: 'primary', text: 'Solicitar Cotización', href: '/contact' }]}
+    image={{
+      src: heroImage,
+      alt: 'Grupo Morsan Seguridad',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Nuestros Servicios Especializados"
+    subtitle="Soluciones de seguridad adaptadas a las necesidades específicas de cada sector y tipo de negocio."
+    columns={3}
+    items={[
+      {
+        title: 'Guardias de Seguridad 12x12 / 24x24',
+        description:
+          'Vigilancia continua para instalaciones y obras, 365 días al año. Personal altamente capacitado en turnos rotativos.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Seguridad y Custodia',
+        description:
+          'Protección especializada de activos, inventarios y tesorería con protocolos estrictos de control.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Protección de Activos',
+        description: `Prevención y control de riesgos para bienes inmuebles y muebles con estrategias personalizadas.`,
+        icon: 'tabler:building-fortress',
+      },
+      {
+        title: 'Vigilancia Física',
+        description:
+          'Rondas estratégicas y presencia permanente para salvaguardar espacios críticos de tu instalación.',
+        icon: 'tabler:walk',
+      },
+      {
+        title: 'Seguridad Hotelera',
+        description:
+          'Protocolos especializados para hoteles, residencias y servicios al huésped en el sector turístico.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Patrullaje',
+        description:
+          'Supervisión dinámica de instalaciones con patrullaje móvil y a pie para cobertura total de perímetros.',
+        icon: 'tabler:car',
+      },
+      {
+        title: 'Sistema Retail',
+        description:
+          'Seguridad integral para comercios, tiendas de prestigio y centros comerciales con prevención de pérdidas.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Monitoreo CCTV 24/7',
+        description: `Monitoreo en tiempo real las 24 horas con respuesta inmediata ante cualquier incidencia detectada.`,
+        icon: 'tabler:video',
+      },
+      {
+        title: 'Control de Acceso',
+        description:
+          'Gestión profesional de accesos vehiculares y peatonales para entradas seguras y controladas.',
+        icon: 'tabler:door',
+      },
+      {
+        title: 'Análisis y Evaluación de Riesgos',
+        description:
+          'Identificación y mitigación de riesgos específicos con planes de seguridad personalizados.',
+        icon: 'tabler:report-analytics',
+      },
+      {
+        title: 'Seguridad Residencial',
+        description:
+          'Protección de conjuntos habitacionales y comunidades cerradas con control de accesos 24/7.',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Seguridad Corporativa',
+        description:
+          'Soluciones de seguridad para empresas y operaciones críticas del sector corporativo.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'Seguridad Hospitalaria',
+        description:
+          'Protocolos especializados para hospitales y centros de atención médica con personal capacitado.',
+        icon: 'tabler:heartbeat',
+      },
+      {
+        title: 'Seguridad en Construcción',
+        description:
+          'Custodia de obras, materiales y personal en sitios de construcción con protocolos específicos.',
+        icon: 'tabler:bulldozer',
+      },
+      {
+        title: 'Seguridad Náutica y Marítima',
+        description:
+          'Protección especializada de muelles, marinas, astilleros y operaciones marítimas.',
+        icon: 'tabler:anchor',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Personal Altamente Capacitado',
+        description:
+          'Equipo de guardias en constante entrenamiento con certificaciones profesionales y protocolos actualizados.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Soluciones Personalizadas',
+        description:
+          'Planes de seguridad adaptados a las necesidades específicas de cada sector y tamaño de instalación.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Tecnología Avanzada',
+        description:
+          'Sistemas de monitoreo CCTV de última generación y control de accesos con tecnología de punta.',
+        icon: 'tabler:device-cctv',
+      },
+      {
+        title: 'Respaldo AMESP',
+        description:
+          'Afiliación oficial a la Asociación Mexicana de Empresas de Seguridad Privada, garantizando calidad certificada.',
+        icon: 'tabler:shield-star',
+      },
+    ]}
+    image={{
+      src: img03,
+      alt: 'Características Morsan',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">¿Por Qué Elegir Grupo Morsan?</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Tranquilidad Operativa',
+        description:
+          'Garantizamos reducción de incidentes y respuesta oportuna para que te concentres en tu negocio.',
+        icon: 'tabler:mood-happy',
+      },
+      {
+        title: 'Experiencia Comprobada',
+        description:
+          'Más de 15 años protegiendo bienes e instalaciones en Cancún y toda la Península de Yucatán.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Eficiencia Costo-Beneficio',
+        description:
+          'Control de riesgos efectivo con inversiones adecuadas, medibles y adaptadas a tu presupuesto.',
+        icon: 'tabler:coin',
+      },
+      {
+        title: 'Cobertura Total',
+        description:
+          'Operamos en Cancún, Playa del Carmen, Tulum y toda la Península de Yucatán con cobertura 365 días.',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+    image={{
+      src: img04,
+      alt: 'Beneficios Morsan',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Beneficios de Nuestros Servicios</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Lo que dicen nuestros clientes"
+    testimonials={[
+      {
+        testimonial: `El servicio de Grupo Morsan ha superado nuestras expectativas. Sus guardias son profesionales y el sistema de monitoreo nos da tranquilidad total. Recomendados al 100%.`,
+        name: 'Carlos Méndez',
+        job: 'Director de Hotel',
+        image: {
+          src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80',
+          alt: 'Cliente Satisfecho',
+        },
+      },
+      {
+        testimonial: `Llevamos 3 años trabajando con Morsan en nuestra plaza comercial. Su respuesta ante incidentes es impecable y el personal siempre es cortés con nuestros visitantes.`,
+        name: 'Ana Patricia Ruiz',
+        job: 'Gerente de Plaza Comercial',
+        image: {
+          src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80',
+          alt: 'Cliente Satisfecho',
+        },
+      },
+      {
+        testimonial: `La evaluación de riesgos que realizaron fue muy completa. Implementaron un plan de seguridad a la medida de nuestra empresa que ha reducido los incidentes significativamente.`,
+        name: 'Roberto Sánchez',
+        job: 'Director de Operaciones',
+        image: {
+          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80',
+          alt: 'Cliente Satisfecho',
+        },
+      },
+    ]}
+    callToAction={{
+      text: 'Ver más testimonios',
+      href: '/contact',
+      icon: 'tabler:chevron-right',
+    }}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Solicitar Evaluación Gratuita',
+        href: '/contact',
+      },
+    ]}
+    title="¿Listo para proteger tu negocio?"
+    subtitle="Solicita una evaluación de riesgos sin costo y recibe un plan de seguridad personalizado. Nuestro equipo está listo para ayudarte."
+  />
+</Layout>

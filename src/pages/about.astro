@@ -1,0 +1,224 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import aboutImage from '~/assets/images/img-05.jpeg';
+import img06 from '~/assets/images/img-06.jpeg';
+
+const metadata = {
+  title: 'Acerca de Nosotros',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Acerca de Nosotros"
+    image={{
+      src: aboutImage,
+      alt: 'Grupo Morsan Equipo',
+    }}
+  >
+    <Fragment slot="title">
+      Protegemos lo más valioso: <br />
+      <span class="text-accent dark:text-white">Tus bienes e instalaciones</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      En Grupo Morsan Seguridad Privada, protegemos lo más valioso: tus bienes muebles e inmuebles. Con más de 15 años de experiencia, operamos en Cancún y toda la Península de Yucatán, brindando soluciones de seguridad integrales para el sector público y privado.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Nuestra Trayectoria en Números"
+    stats={[
+      { title: 'Años de Experiencia', amount: '15+' },
+      { title: 'Guardias Certificados', amount: '200+' },
+      { title: 'Sectores Atendidos', amount: '9' },
+      { title: 'Cobertura Regional', amount: '24/7' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Sectores que Protegemos"
+    subtitle="Nuestro equipo humano está altamente capacitado y comprometido con tu tranquilidad. Custodiamos diferentes ramas del mercado con soluciones personalizadas."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Sector Escolar',
+        description:
+          'Protección integral para instituciones educativas con protocolos especializados para la seguridad de estudiantes y personal.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Residencial',
+        description:
+          'Control de accesos vehicular y peatonal para condominios y comunidades cerradas con vigilancia permanente.',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Sector Inmobiliario',
+        description:
+          'Custodia de desarrollos inmobiliarios, casas muestra y proyectos en construcción con guardias especializados.',
+        icon: 'tabler:building-estate',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Restaurantes y Comercios',
+        description:
+          'Seguridad para establecimientos comerciales y restaurantes con prevención de pérdidas y atención al cliente.',
+        icon: 'tabler:tools-kitchen-2',
+      },
+      {
+        title: 'Plazas Comerciales',
+        description:
+          'Protección integral para centros comerciales con patrullaje, monitoreo y respuesta inmediata ante incidentes.',
+        icon: 'tabler:building-store',
+      },
+      {
+        title: 'Turismo y Hotelería',
+        description:
+          'Servicios especializados para hoteles y resorts con protocolos de atención al huésped y seguridad turística.',
+        icon: 'tabler:beach',
+      },
+      {
+        title: 'Sector Gubernamental',
+        description:
+          'Soluciones de seguridad para instalaciones gubernamentales con personal altamente capacitado y certificado.',
+        icon: 'tabler:building-community',
+      },
+      {
+        title: 'Náutico-Marítimo',
+        description:
+          'Protección especializada para marinas, muelles, embarcaciones y operaciones portuarias en la región.',
+        icon: 'tabler:anchor',
+      },
+      {
+        title: 'Sector Corporativo',
+        description:
+          'Seguridad empresarial con control de accesos, monitoreo y protocolos personalizados para oficinas y corporativos.',
+        icon: 'tabler:briefcase',
+      },
+    ]}
+    image={{
+      src: img06,
+      alt: 'Sectores Morsan',
+    }}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Nuestros Valores"
+    subtitle="Los principios que guían cada acción de Grupo Morsan y garantizan un servicio de excelencia en seguridad privada."
+    items={[
+      {
+        title: 'Compromiso con tu Tranquilidad',
+        description:
+          'Nuestro equipo está dedicado a proporcionar seguridad confiable y respuesta inmediata, garantizando tu paz mental 24/7.',
+      },
+      {
+        title: 'Mejora Continua',
+        description:
+          'Capacitación constante de nuestro personal y actualización de tecnologías para ofrecer siempre el mejor servicio.',
+      },
+      {
+        title: 'Ética y Profesionalismo',
+        description:
+          'Operamos con transparencia, discreción y los más altos estándares de profesionalismo en cada operación.',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="¿Por Qué Elegirnos?"
+    subtitle="Grupo Morsan se destaca en el sector de seguridad privada por su experiencia, certificaciones y compromiso con la excelencia operativa."
+    isReversed={true}
+    callToAction={{
+      text: 'Contáctanos',
+      href: '/contact',
+    }}
+    items={[
+      {
+        title: 'Afiliación AMESP',
+        description: 'Somos parte oficial de la Asociación Mexicana de Empresas de Seguridad Privada, garantizando estándares profesionales y calidad certificada.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Experiencia Comprobada',
+        description:
+          'Más de 15 años protegiendo bienes e instalaciones en Cancún y toda la Península de Yucatán con resultados medibles.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Certificaciones Oficiales',
+        description:
+          'Registros estatales y federales vigentes: SSC/DS/DRSESPS/805/2025 y REPSE AR173461/2025, cumpliendo todas las normativas.',
+        icon: 'tabler:award',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Nuestra Cobertura"
+    tagline="Dónde Operamos"
+    columns={3}
+    items={[
+      {
+        title: 'Cancún',
+        description: 'Calle Punta Conoco, SM 24, Manzana 26, Lote 33, CP: 77509',
+      },
+      {
+        title: 'Playa del Carmen',
+        description: 'Cobertura completa en la Riviera Maya',
+      },
+      {
+        title: 'Península de Yucatán',
+        description: 'Servicios en toda la región con respuesta inmediata',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Contáctanos"
+    tagline="Estamos aquí para ti"
+    columns={2}
+    items={[
+      {
+        title: 'Escríbenos',
+        description:
+          'Envíanos un email a contactogrupomorsan@gmail.com para cotizaciones, evaluaciones gratuitas o consultas generales.',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Llámanos',
+        description:
+          'Comunícate al Tel: 998-677-2992 o Cel: 998-319-1259 para atención inmediata y emergencias 24/7.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+</Layout>

@@ -1,0 +1,366 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import SliderHero from '~/components/widgets/SliderHero';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import img07 from '~/assets/images/img-07.jpeg';
+import img08 from '~/assets/images/img-08.jpeg';
+import img09 from '~/assets/images/img-09.jpeg';
+import heroImg from '~/assets/images/Hero-01.jpeg';
+
+const metadata = {
+  title: 'Grupo Morsan Seguridad Privada | Protección 24/7 en Cancún',
+  description: 'Seguridad privada profesional con más de 15 años de experiencia en Cancún y la Península de Yucatán. Guardias certificados, monitoreo CCTV 24/7 y soluciones personalizadas.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Slider Widget ******************* -->
+
+  <SliderHero client:load />
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="Certificados y Respaldados:" description="Afiliación oficial AMESP | Registro Estatal SSC/DS/DRSESPS/805/2025 | REPSE Federal AR173461/2025" />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="¿Por Qué Elegirnos?"
+    title="Grupo Morsan: Tu Socio en Seguridad"
+    subtitle="Con más de 15 años protegiendo bienes e instalaciones en Cancún y la Península de Yucatán. Respaldados por AMESP y certificaciones oficiales."
+    items={[
+      {
+        title: 'Experiencia Probada',
+        description:
+          'Más de 15 años de trayectoria protegiendo instalaciones en el sector público y privado con resultados medibles.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Personal Certificado',
+        description:
+          'Guardias altamente capacitados en constante entrenamiento con certificaciones profesionales actualizadas.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Soluciones Personalizadas',
+        description:
+          'Planes de seguridad adaptados a cada sector: escolar, residencial, hotelero, comercial, industrial y más.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Respuesta Inmediata',
+        description:
+          'Monitoreo 24/7 con tiempos de respuesta rápidos ante cualquier incidente o emergencia en tus instalaciones.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Tecnología Avanzada',
+        description:
+          'Sistemas de CCTV, control de accesos y tecnología de punta para una seguridad integral y efectiva.',
+        icon: 'tabler:device-cctv',
+      },
+      {
+        title: 'Respaldo AMESP',
+        description:
+          'Afiliación oficial a AMESP garantizando transparencia, estándares profesionales y mejora continua.',
+        icon: 'tabler:award',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Nuestros Servicios"
+    title="Protección Integral para Cada Sector"
+    items={[
+      {
+        title: 'Guardias 24/7',
+        description:
+          'Vigilancia continua 365 días al año con guardias certificados en turnos 12x12 y 24x24 para máxima cobertura.',
+      },
+      {
+        title: 'Monitoreo CCTV',
+        description:
+          'Sistema de videovigilancia en tiempo real con respuesta inmediata ante cualquier incidencia detectada.',
+      },
+      {
+        title: 'Control de Accesos',
+        description:
+          'Gestión profesional de entradas vehiculares y peatonales con tecnología moderna y protocolos seguros.',
+      },
+    ]}
+    image={{
+      src: img07,
+      alt: 'Servicios Morsan',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Servicios Especializados</h3>
+      Soluciones de seguridad adaptadas a tus necesidades específicas
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Seguridad Hotelera',
+        description: `Protocolos especializados para el sector turístico con atención al huésped y protección de instalaciones.`,
+      },
+      {
+        title: 'Seguridad Residencial',
+        description:
+          'Control de accesos y vigilancia permanente para condominios y comunidades cerradas.',
+      },
+      {
+        title: 'Seguridad Corporativa',
+        description:
+          'Soluciones integrales para empresas con custodia de activos y protección de personal.',
+      },
+      {
+        title: 'Análisis de Riesgos',
+        description:
+          'Evaluación gratuita e identificación de vulnerabilidades con plan de seguridad personalizado.',
+      },
+    ]}
+    image={{
+      src: img08,
+      alt: 'Sectores Morsan',
+    }}
+  >
+    <Fragment slot="content">Cobertura para todos los sectores del mercado.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Tranquilidad Operativa',
+        description:
+          'Garantizamos reducción de incidentes para que te concentres en tu negocio sin preocupaciones.',
+      },
+      {
+        title: 'Calidad Certificada',
+        description:
+          'Afiliación AMESP y registros oficiales vigentes que garantizan profesionalismo y transparencia.',
+      },
+      {
+        title: 'Eficiencia Costo-Beneficio',
+        description:
+          'Inversiones adecuadas con resultados medibles y control de riesgos efectivo.',
+      },
+      {
+        title: 'Cobertura Regional',
+        description: `Operamos en Cancún, Playa del Carmen, Tulum y toda la Península de Yucatán con respuesta inmediata.`,
+      },
+    ]}
+    image={{
+      src: img09,
+      alt: 'Beneficios Morsan',
+    }}
+  >
+    <Fragment slot="content">Protección diseñada para tu crecimiento y éxito.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Cómo Empezar con Grupo Morsan"
+    items={[
+      {
+        title: 'Paso 1: <span class="font-medium">Contáctanos</span>',
+        description:
+          "Llámanos al 998-677-2992 o escríbenos a contactogrupomorsan@gmail.com. También puedes completar nuestro formulario de contacto y te responderemos en menos de 24 horas.",
+        icon: 'tabler:phone',
+      },
+      {
+        title: 'Paso 2: <span class="font-medium">Evaluación Gratuita</span>',
+        description:
+          "Nuestro equipo realizará una visita de reconocimiento a tus instalaciones para identificar necesidades y vulnerabilidades específicas sin costo alguno.",
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: 'Paso 3: <span class="font-medium">Plan Personalizado</span>',
+        description:
+          'Recibirás un plan de seguridad diseñado específicamente para tu sector y necesidades, con cotización transparente y opciones adaptadas a tu presupuesto.',
+        icon: 'tabler:file-certificate',
+      },
+      {
+        title: '¡Protegido!',
+        icon: 'tabler:shield-check',
+      },
+    ]}
+    image={{
+      src: heroImg,
+      alt: 'Proceso Morsan',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Sectores que Protegemos"
+    subtitle="Soluciones especializadas para cada tipo de negocio e instalación"
+    tagline="Nuestros Servicios"
+    items={[
+      {
+        title: 'Seguridad Hotelera',
+        description: "Protocolos especializados para hoteles y resorts con atención al huésped las 24 horas.",
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Sector Residencial',
+        description:
+          "Control de accesos vehicular y peatonal para condominios y comunidades cerradas.",
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Plazas Comerciales',
+        description:
+          'Seguridad integral para centros comerciales con patrullaje y prevención de pérdidas.',
+        icon: 'tabler:building-store',
+      },
+      {
+        title: 'Sector Educativo',
+        description:
+          'Protección de estudiantes y personal con protocolos de seguridad escolar especializados.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Custodia en Eventos',
+        description:
+          'Seguridad para eventos corporativos, sociales y masivos con personal capacitado.',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: 'Obras de Construcción',
+        description: 'Custodia de materiales, equipo y herramientas en proyectos de construcción.',
+        icon: 'tabler:bulldozer',
+      },
+      {
+        title: 'Sector Gubernamental',
+        description: 'Soluciones para instalaciones públicas con guardias certificados y protocolos especiales.',
+        icon: 'tabler:building-community',
+      },
+      {
+        title: 'Monitoreo CCTV',
+        description:
+          'Vigilancia remota 24/7 con cámaras de alta definición y respuesta inmediata a incidentes.',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'Náutico-Marítimo',
+        description: "Protección de marinas, muelles y embarcaciones en zonas costeras.",
+        icon: 'tabler:anchor',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Why AstroWind?',
+        description:
+          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+      },
+      {
+        title: 'What do I need to start?',
+        description:
+          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+      },
+      {
+        title: 'How to install the Astro + Tailwind CSS template?',
+        description:
+          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+      },
+      {
+        title: "What's something that you don't understand?",
+        description:
+          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+      },
+      {
+        title: 'What is something that you would like to try again?',
+        description:
+          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+      },
+      {
+        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        description:
+          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Años de Experiencia', amount: '15+' },
+      { title: 'Guardias Certificados', amount: '200+' },
+      { title: 'Clientes Satisfechos', amount: '500+' },
+      { title: 'Cobertura Regional', amount: '24/7' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Solicitar Evaluación Gratuita',
+        href: '/contact',
+        icon: 'tabler:phone',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Grupo Morsan&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Seguridad Privada</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      ¿Listo para proteger tu negocio? <br class="hidden md:inline" />Solicita tu evaluación de riesgos gratuita hoy mismo.
+    </Fragment>
+  </CallToAction>
+</Layout>

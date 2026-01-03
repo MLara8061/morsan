@@ -1,0 +1,26 @@
+---
+import { SITE } from 'astrowind:config';
+import { getImage } from 'astro:assets';
+import logoLight from '~/assets/images/logo-Morsan-removebg.png';
+import logoDark from '~/assets/images/logo-Morsan-removebg.png';
+
+const optimizedLogoLight = await getImage({ src: logoLight, width: 180 });
+const optimizedLogoDark = await getImage({ src: logoDark, width: 180 });
+---
+
+<div class="flex items-center">
+  <img
+    src={optimizedLogoLight.src}
+    alt="Grupo Morsan Logo"
+    class="inline-block dark:hidden h-12 md:h-14 w-auto"
+    width="180"
+    height="auto"
+  />
+  <img
+    src={optimizedLogoDark.src}
+    alt="Grupo Morsan Logo"
+    class="hidden dark:inline-block h-12 md:h-14 w-auto brightness-0 invert"
+    width="180"
+    height="auto"
+  />
+</div>

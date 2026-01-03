@@ -1,0 +1,94 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contacto',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Contacto" title="¡Protege lo que más Importa!" />
+
+  <ContactUs
+    id="form"
+    title="¡Contáctanos Hoy!"
+    subtitle="¿Necesitas una evaluación de riesgos gratuita? Completa el formulario y recibe un plan de seguridad personalizado. También puedes agendar una visita de reconocimiento en tus instalaciones."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Nombre',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Mensaje',
+    }}
+    disclaimer={{
+      label:
+        'Al enviar este formulario, aceptas la recopilación de tu información personal para fines de contacto.',
+    }}
+    description="Nuestro equipo de atención responde en un máximo de 24 horas hábiles."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Estamos aquí para ayudarte"
+    items={[
+      {
+        title: 'Atención General',
+        description: `Contáctanos para consultas sobre nuestros servicios de seguridad, evaluaciones de riesgo, cotizaciones personalizadas y cualquier pregunta general sobre Grupo Morsan.`,
+      },
+      {
+        title: 'Ventas y Cotizaciones',
+        description:
+          'Contáctanos para solicitar presupuestos, opciones de personalización de servicios, planes de seguridad a medida y consultas sobre servicios específicos para tu sector.',
+      },
+      {
+        title: 'Soporte Operativo',
+        description:
+          'Contacta a nuestro equipo para asistencia con guardias en servicio, monitoreo CCTV, respuesta a incidentes, o cualquier situación operativa que requiera atención inmediata.',
+      },
+      {
+        title: 'Teléfono',
+        description: '+52 998 677 2992',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Celular',
+        description: '+52 998 319 1259',
+        icon: 'tabler:phone',
+      },
+      {
+        title: 'Email',
+        description: 'contactogrupomorsan@gmail.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Ubicación',
+        description: 'Calle Punta Conoco, Super Manzana 24, Manzana 26, Lote 33, CP: 77509, Cancún, Q. Roo',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Registro Estatal',
+        description: 'SSC/DS/DRSESPS/805/2025',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'REPSE Federal',
+        description: 'AR173461/2025 | Registro: 02313905V',
+        icon: 'tabler:shield-check',
+      },
+    ]}
+  />
+</Layout>

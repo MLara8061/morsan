@@ -1,0 +1,142 @@
+---
+// Botón flotante de WhatsApp con animación y badge
+---
+
+<div class="whatsapp-float">
+  <div class="whatsapp-message">
+    Hola! ¿Te podemos ayudar?
+  </div>
+  <a 
+    href="https://wa.me/529986772992?text=Hola!%20Necesito%20información%20sobre%20sus%20servicios%20de%20seguridad" 
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-button"
+    aria-label="Contactar por WhatsApp"
+  >
+    <span class="badge">1</span>
+    <svg viewBox="0 0 32 32" class="whatsapp-icon">
+      <path fill="currentColor" d="M16 0C7.164 0 0 7.163 0 16c0 2.824.736 5.488 2.144 7.805L.056 30.656a.5.5 0 0 0 .624.624l6.851-2.088A15.932 15.932 0 0 0 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm8.484 22.968c-.348.98-2.021 1.814-2.904 1.916-.772.087-1.775.124-2.872-.18-.664-.184-1.516-.428-2.604-.839-4.56-1.723-7.528-6.302-7.756-6.591-.228-.289-1.86-2.471-1.86-4.711s1.177-3.344 1.594-3.804c.417-.46.908-.575 1.212-.575.304 0 .608.004.875.016.28.012.656-.107.986.753.348.901 1.188 2.897 1.292 3.108.104.211.173.457.035.746-.139.289-.208.468-.416.722-.208.254-.437.566-.624.76-.208.211-.425.44-.183.864.243.425.1.958 2.008 2.857 1.908 1.899 3.461 2.489 3.956 2.768.496.279.785.233 1.073-.139.289-.372 1.236-1.442 1.567-1.938.331-.496.663-.414 1.118-.248.455.166 2.889 1.362 3.384 1.611.496.248.827.372.948.579.121.208.121 1.198-.227 2.178z"/>
+    </svg>
+  </a>
+</div>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-direction: row;
+  }
+
+  .whatsapp-button {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+  }
+
+  .whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+  }
+
+  .whatsapp-icon {
+    width: 32px;
+    height: 32px;
+    color: white;
+  }
+
+  .badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #ff0000;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    animation: bounce 1s infinite;
+  }
+
+  .whatsapp-message {
+    background: white;
+    color: #333;
+    padding: 12px 16px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-20px);
+    pointer-events: none;
+    animation: slideMessage 3s ease-in-out 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  @keyframes slideMessage {
+    0%, 90%, 100% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    10%, 80% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      bottom: 15px;
+      right: 10px;
+    }
+    
+    .whatsapp-button {
+      width: 56px;
+      height: 56px;
+    }
+    
+    .whatsapp-icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    .whatsapp-message {
+      display: none;
+    }
+  }
+</style>
