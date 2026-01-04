@@ -3,25 +3,28 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import heroImg1 from '~/assets/images/Hero-01.jpeg';
+import heroImg2 from '~/assets/images/img-02.jpeg';
+import heroImg3 from '~/assets/images/img-03.jpeg';
 
 const slides = [
   {
     title: 'Protección Integral 24/7',
     desc: 'Más de 15 años protegiendo bienes e instalaciones en Cancún y la Península de Yucatán.',
     cta: 'Solicitar Cotización',
-    img: '/src/assets/images/Hero-01.jpeg',
+    img: heroImg1.src,
   },
   {
     title: 'Guardias Certificados',
     desc: 'Personal altamente capacitado y en constante entrenamiento para tu seguridad.',
     cta: 'Conocer Servicios',
-    img: '/src/assets/images/img-02.jpeg',
+    img: heroImg2.src,
   },
   {
     title: 'Respaldo AMESP',
     desc: 'Afiliación oficial garantizando estándares profesionales y calidad certificada.',
     cta: 'Evaluación Gratuita',
-    img: '/src/assets/images/img-03.jpeg',
+    img: heroImg3.src,
   },
 ];
 
@@ -34,12 +37,12 @@ export default function SliderHero() {
         pagination={{ clickable: true }}
         navigation
         loop
-        className="h-[480px] md:h-[600px] lg:h-[680px]"
+        className="h-[720px] md:h-[720px] lg:h-[780px]"
       >
         {slides.map((slide, idx) => (
           <SwiperSlide key={idx}>
             <div
-              className="flex h-full items-center bg-cover bg-center px-6 md:px-16 lg:px-24"
+              className="flex h-full items-center bg-cover bg-center px-6 md:px-16 lg:px-24 pt-12 md:pt-16 lg:pt-16 pb-28 md:pb-36 lg:pb-44"
               style={{
                 backgroundImage: `linear-gradient(90deg, rgba(12,19,33,0.85), rgba(12,19,33,0.4)), url(${slide.img})`,
               }}
@@ -81,9 +84,9 @@ export default function SliderHero() {
       </Swiper>
 
       {/* Trust badges */}
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-950/90 to-transparent z-10 pb-8 pt-16">
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-950/95 to-transparent z-10 pb-6 pt-16 md:pb-10 md:pt-20">
         <div className="container mx-auto px-6 md:px-16 lg:px-24">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
             <div className="text-white/90">
               <p className="text-2xl md:text-3xl font-bold text-amber-400">24/7</p>
               <p className="text-sm text-slate-300 mt-1">Monitoreo</p>
@@ -113,6 +116,12 @@ export default function SliderHero() {
           height: 48px;
           border-radius: 50%;
           backdrop-filter: blur(8px);
+        }
+        @media (max-width: 768px) {
+          .swiper-button-next,
+          .swiper-button-prev {
+            display: none;
+          }
         }
         .swiper-button-next:after,
         .swiper-button-prev:after {

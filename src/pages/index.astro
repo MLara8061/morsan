@@ -27,7 +27,7 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Slider Widget ******************* -->
 
-  <SliderHero client:load />
+  <SliderHero client:only="react" />
 
   <!-- Note Widget ******************* -->
 
@@ -294,40 +294,40 @@ const metadata = {
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    title="Preguntas Frecuentes"
+    subtitle="Encuentra respuestas a las preguntas más comunes sobre nuestros servicios de seguridad privada en Cancún y la Riviera Maya. Estamos aquí para brindarte la información que necesitas."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
+        title: '¿Qué servicios de seguridad ofrece Grupo Morsan?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          "Ofrecemos servicios integrales de seguridad privada incluyendo vigilancia residencial y comercial, custodia de eventos especiales, monitoreo 24/7, escoltas ejecutivos, control de accesos, y soluciones personalizadas de seguridad. Nuestro equipo está capacitado para proteger residencias, empresas, hoteles, condominios y eventos en toda la región.",
       },
       {
-        title: 'What do I need to start?',
+        title: '¿Cuentan con certificaciones y están afiliados a AMESP?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          'Sí, Grupo Morsan está certificado por la Secretaría de Seguridad Pública y somos miembros activos de AMESP (Asociación Mexicana de Empresas de Seguridad Privada). Todo nuestro personal cuenta con capacitación certificada, exámenes de control de confianza y cumplimos con todas las normativas federales y estatales vigentes.',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: '¿Cómo puedo solicitar una cotización?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          "Es muy sencillo. Puedes contactarnos a través de nuestro formulario web, llamar directamente a nuestras oficinas, o enviarnos un mensaje por WhatsApp. Uno de nuestros asesores te atenderá para conocer tus necesidades específicas y elaborar una propuesta personalizada sin compromiso. La cotización es completamente gratuita.",
       },
       {
-        title: "What's something that you don't understand?",
+        title: '¿Qué áreas de Cancún y la Riviera Maya cubren?',
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          "Brindamos cobertura completa en Cancún, Playa del Carmen, Tulum, Puerto Morelos, Isla Mujeres y toda la Riviera Maya. Contamos con personal estratégicamente ubicado para garantizar tiempos de respuesta rápidos. Operamos 24 horas al día, 365 días al año en toda la zona hotelera y áreas residenciales.",
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: '¿Qué tecnología utilizan en sus servicios de seguridad?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          "Implementamos tecnología de última generación incluyendo sistemas de videovigilancia en alta definición, monitoreo en tiempo real con central de alarmas, control de accesos biométrico, rastreo GPS de unidades móviles, y comunicación encriptada. Nuestros sistemas están integrados para proporcionar seguridad preventiva y respuesta inmediata ante cualquier incidente.",
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: '¿Qué garantiza la calidad de sus guardias de seguridad?',
         description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          "Todos nuestros guardias pasan por un riguroso proceso de selección que incluye exámenes de confianza, antidoping, verificación de antecedentes y capacitación continua. Contamos con más de 15 años de experiencia en el sector y nuestro personal recibe entrenamiento constante en protocolos de seguridad, primeros auxilios, manejo de crisis y atención al cliente.",
       },
     ]}
   />
