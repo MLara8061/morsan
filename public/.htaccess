@@ -1,0 +1,8 @@
+Options -Indexes
+DirectoryIndex index.html
+
+RewriteEngine On
+RewriteBase /
+
+# Redirige la solicitud por defecto de los navegadores a favicon.svg
+RewriteRule ^favicon\.ico$ /favicon.svg [R=302,L]
