@@ -25,6 +25,9 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   output: 'static',
+  build: {
+    assets: 'assets',
+  },
 
   integrations: [tailwind({
     applyBaseStyles: false,
